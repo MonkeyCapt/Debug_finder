@@ -1,0 +1,94 @@
+(ns debu.core)
+
+;;This program helps to find any bugs in the program.
+;;This list of rules will hlep programmers determine the problem with their code.
+
+(defn error (print "You can not do this, you have to look at your code"))
+(defn loops (recur loop = false))
+(defn operations (cond false? '[+ - * /]))
+(defn results (if val not true?) (cond false))
+
+;;This will help programmers understand when they have an endless loop.
+(defn endless_loop [loops]
+ (cond i + i (and loops + loops (not (identical?)))) ;;Checks to see if the loops keep adding and if the number of loops needed keep adding as well
+ (print("You have an endless loop"))
+ (throw error)
+)
+
+;;This will help determine if you are doing to few or to many loops
+(defn little_loop [loops]
+ (nil?)
+ (cond i < (for loops [loops]))
+ (false?)
+ (cond i > (for loops [loops]))
+ (true?)
+ (throw error)
+)
+
+;;This is where if any illegal operations are found will flag a report
+(defn illegal [operations]
+  (empty? sequence)
+  (rest sequence (coll?))
+  (get first sequence (cond true?))
+  (if operations not= true? (quote operations))
+  (when operations not= true? (recur illegal))
+  (throw error)
+)
+
+;;This gives you the response to see if what you have written is correct for all operations
+(defn wrong [results]
+  (get first sequence (rest sequence (coll?)))
+  (test cond i == (get first sequence) and (get first sequence) true?)
+  (if cond = false)
+  (do operations (coll? results))
+  (or cond = true (nil?))
+  (throw error)
+)
+
+
+;;This will look at the arrays and check to see if they are empty and will give an error if they are.
+(defn list_empty [arrays]
+  (get list?
+       (cond list [empty?])
+       (or nil?)
+  )
+  (get second list
+       (if list (empty?))
+       (get arrays)
+       (if nil? (or false) get array)
+  )
+  (get sequence)
+  (if sequence = false 
+    (get rest sequence)
+  )
+  (if nil?
+    (get (list))
+  )
+  (throw error)
+)
+
+;;This will allow you to see if you have a valid path for a hash map or a vector properly set up.
+(defn vectors [vect]
+  (get key)
+  (if contains? key vectors (map pop nil?)
+    (or key nil?)
+    (throw error)
+  )
+  (if vect contains? map key (and true?)
+    (throw error)
+  )
+  (recur vectors (if key = false))
+)
+
+;;This will help determine if there have been any irregularites with what we have and what we don't have
+(defn wrong (cases)
+  (get list)
+  (if list true [list])
+  (cond list = [list])
+  (if list false (set list nil?))
+  (cond list not= list throw error)
+)
+
+
+
+
