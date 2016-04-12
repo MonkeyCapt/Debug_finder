@@ -1,5 +1,5 @@
 (ns debu.core)
-
+;;This program I was just messing around with, I wanted to see if it would be possible to make it run against another program.
 ;;This program helps to find any bugs in the program.
 ;;This list of rules will hlep programmers determine the problem with their code.
 
