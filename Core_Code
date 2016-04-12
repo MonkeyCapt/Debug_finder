@@ -40,46 +40,55 @@
   (println (get database :private_class))
   (nil?))
 
+;;This will give the error that is associated with no output.
 (defn no_out [database]
   (if problem == "no_output")
   (println (get database :no_output))
   (nil?))
 
+;;This will give the error that is associated loops that are not properly executed.
 (defn loop_ex [database]
   (if problem == "loop_executes_wrong_amount")
   (println (get database :loop_executes_wrong_amount))
   (nil?))
 
+;;This will give the error that is associated with an illegal operation.
 (defn illegal [database]
   (if problem == "illegal_operation")
   (println (get database :illegal_operation))
   (nil?))
 
+;;This will give the error that is associated with a part of results that are partly wrong.
 (defn some_incorrect [database]
   (if problem == "some_incorrect_results")
   (println (get database :some_incorrect_results))
   (nil?))
 
+;;This will give the error that is associated with all incorrect outputs. 
 (defn all_incorrect [database]
   (if problem == "no_correct_results")
   (println (get database :no_correct_results))
   (nil?))
 
+;;This will give the error that is associated with incomplete results.
 (defn incomplete [database]
   (if problem == "incomplete_results")
   (println (get database :incomplete_results))
   (nil?))
 
+;;This will give the error that is associated with the program ending abruptly.
 (defn end_quick [database]
   (if problem == "ending_abruptly")
   (println (get database :ending_abruptly))
   (nil?))
 
+;;This will give the error that is associated with the data that is modified without your permission.
 (defn change [database]
   (if problem == "data_changed_incorrectly")
   (println (get database :data_changed_incorrectly))
   (nil?))
 
+;;This will give the error that is associated with a having a public class when needed to make it private
 (defn pub [database]
   (if problem == "public_data")
   (println (get database :public_data))
