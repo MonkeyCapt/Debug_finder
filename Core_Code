@@ -1,4 +1,4 @@
-(ns hw3.core)
+(ns debu.core)
 
 ;; String that contains the possible problems a user may be facing, giving them a possiblity to 
 (def problems "infinite_loop, private_class, no_output, loop_executes_wrong_amount, 
@@ -30,66 +30,66 @@
 ;; Each of these will produce a result when taken with a UI that will point you to the proper direction.
 ;; This will get the error that is assosicated with infinite loops.
 (defn inf_loop [database]
-  (if problem == "infinite_loop")
+  (if problems == "infinite_loop")
   (println (get database :infinite_loop))
   (nil?))
 
 ;;This will get the error that is associated with private classes
 (defn pri_class [database]
-  (if problem == "prrivate_class")
+  (if problems == "prrivate_class")
   (println (get database :private_class))
-  (nil?))
+)
 
 ;;This will give the error that is associated with no output.
 (defn no_out [database]
-  (if problem == "no_output")
+  (if problems == "no_output")
   (println (get database :no_output))
-  (nil?))
+)
 
 ;;This will give the error that is associated loops that are not properly executed.
 (defn loop_ex [database]
-  (if problem == "loop_executes_wrong_amount")
+  (if problems == "loop_executes_wrong_amount")
   (println (get database :loop_executes_wrong_amount))
-  (nil?))
+)
 
 ;;This will give the error that is associated with an illegal operation.
 (defn illegal [database]
-  (if problem == "illegal_operation")
+  (if problems == "illegal_operation")
   (println (get database :illegal_operation))
-  (nil?))
+)
 
 ;;This will give the error that is associated with a part of results that are partly wrong.
 (defn some_incorrect [database]
-  (if problem == "some_incorrect_results")
+  (if problems == "some_incorrect_results")
   (println (get database :some_incorrect_results))
-  (nil?))
+)
 
 ;;This will give the error that is associated with all incorrect outputs. 
 (defn all_incorrect [database]
-  (if problem == "no_correct_results")
+  (if problems == "no_correct_results")
   (println (get database :no_correct_results))
-  (nil?))
+)
 
 ;;This will give the error that is associated with incomplete results.
 (defn incomplete [database]
-  (if problem == "incomplete_results")
+  (if problems == "incomplete_results")
   (println (get database :incomplete_results))
-  (nil?))
+)
 
 ;;This will give the error that is associated with the program ending abruptly.
 (defn end_quick [database]
-  (if problem == "ending_abruptly")
+  (if problems == "ending_abruptly")
   (println (get database :ending_abruptly))
-  (nil?))
+)
 
 ;;This will give the error that is associated with the data that is modified without your permission.
 (defn change [database]
-  (if problem == "data_changed_incorrectly")
+  (if problems == "data_changed_incorrectly")
   (println (get database :data_changed_incorrectly))
-  (nil?))
+)
 
 ;;This will give the error that is associated with a having a public class when needed to make it private
 (defn pub [database]
-  (if problem == "public_data")
+  (if problems == "public_data")
   (println (get database :public_data))
-  (nil?))
+)
