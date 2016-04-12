@@ -1,0 +1,86 @@
+(ns hw3.core)
+
+;; String that contains the possible problems a user may be facing, giving them a possiblity to 
+(def problems "infinite_loop, private_class, no_output, loop_executes_wrong_amount, 
+  illegal_operation, some_incorrect_results, no_incorrect_results, incomplete_results, data_modified, 
+  ending_abruptly, data_not_changed, public_data")
+
+
+;; A database that is presented contain a list of possible errors 
+(def database {
+   :infinite_loop "You might miss a return statement, Loop is missing an ending",
+   :private_class "Class may be set to private instead of public, private class can only be found in the location that it is set to, try using a public class for every place that is set to public",
+   :no_output "print method may be missing, a 'main' function may be missing, class may not be giving a return statement",
+   :loop_executes_wrong_amount "may not be executing at all, array refrenced at location 1 rather than location 0, loop structured may be incorrectly nested",
+   :illegal_operation "a division by 0 is not possible, the operations are not compatible with each other, too many operations have been stacked within each other giving a value that makes the statement false",
+   :some_incorrect_results "conditions may produce a bad value, possible errors in your scope, order of operations may be incorrect",
+   :no_correct_results "incorrect opperation may be present, incorrect indexing, missing return statement, scope errors",
+   :incomplete_results "error in indexing, loop ended to quickly",
+   :data_modified "error in your scope, your pointer might be wrong",
+   :ending_abruptly "conditionals may be missing, your UI might be mishandled, memory may be mismanaged",
+   :data_changed_incorrectly "static or final type, error in your scope, your pointer might be wrong, erorr in index",
+   :public_data "public class used instead of private"})
+
+;; If implemeted with a UI this can be the location where the user would input what type of problem they are facing.
+(print "Enter a problem category from the following list")
+(print " ")
+(print problems)
+
+
+;; Each of these will produce a result when taken with a UI that will point you to the proper direction.
+;; This will get the error that is assosicated with infinite loops.
+(defn inf_loop [database]
+  (if problem == "infinite_loop")
+  (println (get database :infinite_loop))
+  (nil?))
+
+;;This will get the error that is associated with private classes
+(defn pri_class [database]
+  (if problem == "prrivate_class")
+  (println (get database :private_class))
+  (nil?))
+
+(defn no_out [database]
+  (if problem == "no_output")
+  (println (get database :no_output))
+  (nil?))
+
+(defn loop_ex [database]
+  (if problem == "loop_executes_wrong_amount")
+  (println (get database :loop_executes_wrong_amount))
+  (nil?))
+
+(defn illegal [database]
+  (if problem == "illegal_operation")
+  (println (get database :illegal_operation))
+  (nil?))
+
+(defn some_incorrect [database]
+  (if problem == "some_incorrect_results")
+  (println (get database :some_incorrect_results))
+  (nil?))
+
+(defn all_incorrect [database]
+  (if problem == "no_correct_results")
+  (println (get database :no_correct_results))
+  (nil?))
+
+(defn incomplete [database]
+  (if problem == "incomplete_results")
+  (println (get database :incomplete_results))
+  (nil?))
+
+(defn end_quick [database]
+  (if problem == "ending_abruptly")
+  (println (get database :ending_abruptly))
+  (nil?))
+
+(defn change [database]
+  (if problem == "data_changed_incorrectly")
+  (println (get database :data_changed_incorrectly))
+  (nil?))
+
+(defn pub [database]
+  (if problem == "public_data")
+  (println (get database :public_data))
+  (nil?))
